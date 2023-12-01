@@ -62,6 +62,9 @@ extension AmaniViewController: AmaniVideoDelegate {
     
     func onUIEvent(event: AmaniVideoSDK.AmaniVideo.UIEvent) {
         print("Socket onUIEvent -> \(event.hashValue) - \(event)")
+        videoContainer.removeFromSuperview()
+        amaniVideo = nil
+        
     }
     
     func onRemoteEvent(event: AmaniVideoSDK.AmaniVideo.RemoteEvent) {
