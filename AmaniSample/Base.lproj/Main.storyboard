@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H6W-pK-YxB">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AmaniSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpV-7a-GP7">
+                                <rect key="frame" x="124" y="408.66666666666669" width="145" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show Amani VC"/>
+                                <connections>
+                                    <segue destination="jN0-5A-Hwr" kind="show" id="o56-RZ-Gnk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xpV-7a-GP7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0XC-lG-Xz6"/>
+                            <constraint firstItem="xpV-7a-GP7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X9L-UI-Ph7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lsK-Ay-SoI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1063.3587786259541" y="24.647887323943664"/>
+        </scene>
+        <!--Amani View Controller-->
+        <scene sceneID="0ac-cF-E16">
+            <objects>
+                <viewController id="jN0-5A-Hwr" customClass="AmaniViewController" customModule="AmaniSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vip-4h-Xdp">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iFD-W1-RLs" userLabel="AmaniVideoViewContainer">
+                                <rect key="frame" x="10" y="113" width="373" height="695"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9Qs-55-UqV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iFD-W1-RLs" firstAttribute="leading" secondItem="9Qs-55-UqV" secondAttribute="leading" constant="10" id="4OD-iL-CVs"/>
+                            <constraint firstItem="9Qs-55-UqV" firstAttribute="bottom" secondItem="iFD-W1-RLs" secondAttribute="bottom" constant="10" id="ENp-5C-4QG"/>
+                            <constraint firstItem="iFD-W1-RLs" firstAttribute="top" secondItem="9Qs-55-UqV" secondAttribute="top" constant="10" id="MEm-1a-Mqs"/>
+                            <constraint firstItem="9Qs-55-UqV" firstAttribute="trailing" secondItem="iFD-W1-RLs" secondAttribute="trailing" constant="10" id="psg-2I-eNu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YX9-ab-ax2"/>
+                    <connections>
+                        <outlet property="videoContainer" destination="iFD-W1-RLs" id="3fR-wA-gqr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lM7-pp-Wqb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2007" y="25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Kzv-Pf-dHo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H6W-pK-YxB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8We-MZ-7kk">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="pW0-tv-M35"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R6d-PT-1t0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.64122137404578" y="24.647887323943664"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

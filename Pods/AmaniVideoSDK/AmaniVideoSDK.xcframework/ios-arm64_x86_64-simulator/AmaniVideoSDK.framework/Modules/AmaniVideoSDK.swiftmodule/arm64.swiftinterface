@@ -1,0 +1,156 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AmaniVideoSDK
+import AVFoundation
+import Foundation
+import SocketIO
+import Swift
+import UIKit
+import WebRTC
+import _Concurrency
+extension AmaniVideoSDK.AmaniVideo {
+  public enum AmaniVideoError : Swift.Error {
+    case missingParameters(Swift.String)
+    case socketConnection(Swift.String)
+    case rtcConnection(Swift.String)
+    case viewNotLoaded
+  }
+}
+extension AmaniVideoSDK.AmaniVideo {
+  public enum ViewMode {
+    case landscape
+    case portrait
+    public static func == (a: AmaniVideoSDK.AmaniVideo.ViewMode, b: AmaniVideoSDK.AmaniVideo.ViewMode) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum ButtonColors {
+    case switchCameraButtonBackground
+    case switchCameraButton
+    case closeCameraButtonBackground
+    case closeCameraButton
+    case muteButtonBackground
+    case muteButton
+    case endCallButtonBackground
+    case endCallButton
+    public static func == (a: AmaniVideoSDK.AmaniVideo.ButtonColors, b: AmaniVideoSDK.AmaniVideo.ButtonColors) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum ButtonIcons {
+    case switchCamera
+    case endCall
+    case microphone
+    case microphoneOff
+    case camera
+    case cameraOff
+    public static func == (a: AmaniVideoSDK.AmaniVideo.ButtonIcons, b: AmaniVideoSDK.AmaniVideo.ButtonIcons) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 12.0, *)
+final public class AmaniVideo : ObjectiveC.NSObject {
+  public static let sharedInstance: AmaniVideoSDK.AmaniVideo
+  final public let version: Swift.String
+  final public func start(on view: UIKit.UIView) -> UIKit.UIView
+  final public func setDelegate(_ delegate: AmaniVideoSDK.AmaniVideoDelegate)
+  final public func toggleTorch()
+  final public func switchCamera()
+  @objc deinit
+}
+public protocol AmaniVideoDelegate : AnyObject {
+  func onConnectionState(newState: AmaniVideoSDK.AmaniVideo.ConnectionState)
+  func onException(error: [Swift.String])
+  func onUIEvent(event: AmaniVideoSDK.AmaniVideo.UIEvent)
+  func onRemoteEvent(event: AmaniVideoSDK.AmaniVideo.RemoteEvent)
+}
+public class AmaniVideoBuilder {
+  public init()
+  @discardableResult
+  public func setServerURL(url: Foundation.URL) -> AmaniVideoSDK.AmaniVideoBuilder
+  @discardableResult
+  public func setToken(token: Swift.String) -> AmaniVideoSDK.AmaniVideoBuilder
+  @discardableResult
+  public func setName(name: Swift.String, surname: Swift.String) -> AmaniVideoSDK.AmaniVideoBuilder
+  @discardableResult
+  public func setDelegate(delegate: AmaniVideoSDK.AmaniVideoDelegate?) -> AmaniVideoSDK.AmaniVideoBuilder
+  @discardableResult
+  public func setRemoteViewMode(viewMode: AmaniVideoSDK.AmaniVideo.ViewMode) -> AmaniVideoSDK.AmaniVideoBuilder
+  @discardableResult
+  public func setBackgroundViewColor(color: UIKit.UIColor) -> AmaniVideoSDK.AmaniVideoBuilder
+  @discardableResult
+  public func setButtonColors(colors: [AmaniVideoSDK.AmaniVideo.ButtonColors : UIKit.UIColor]) -> AmaniVideoSDK.AmaniVideoBuilder
+  @discardableResult
+  public func setButtonIcons(icons: [AmaniVideoSDK.AmaniVideo.ButtonIcons : UIKit.UIImage]) -> AmaniVideoSDK.AmaniVideoBuilder
+  @discardableResult
+  public func setRTCConfig(stunServerURL: Swift.String, turnServerURL: Swift.String, turnUsername: Swift.String, turnPassword: Swift.String) -> AmaniVideoSDK.AmaniVideoBuilder
+  public func build() throws -> AmaniVideoSDK.AmaniVideo
+  @objc deinit
+}
+extension AmaniVideoSDK.AmaniVideo {
+  public enum ConnectionState {
+    case connecting
+    case connected
+    case disconnected
+    case failed
+    public static func == (a: AmaniVideoSDK.AmaniVideo.ConnectionState, b: AmaniVideoSDK.AmaniVideo.ConnectionState) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+extension AmaniVideoSDK.AmaniVideo {
+  public enum UIEvent {
+    case cameraSwitch
+    case cameraClose
+    case callEnd
+    case mute
+    case torch
+    public static func == (a: AmaniVideoSDK.AmaniVideo.UIEvent, b: AmaniVideoSDK.AmaniVideo.UIEvent) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum CameraPosition {
+    case front
+    case back
+    public static func == (a: AmaniVideoSDK.AmaniVideo.CameraPosition, b: AmaniVideoSDK.AmaniVideo.CameraPosition) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum RemoteEvent {
+    case cameraSwitch
+    case callEnd
+    case torch
+    public static func == (a: AmaniVideoSDK.AmaniVideo.RemoteEvent, b: AmaniVideoSDK.AmaniVideo.RemoteEvent) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+extension AmaniVideoSDK.AmaniVideo.ViewMode : Swift.Equatable {}
+extension AmaniVideoSDK.AmaniVideo.ViewMode : Swift.Hashable {}
+extension AmaniVideoSDK.AmaniVideo.ButtonColors : Swift.Equatable {}
+extension AmaniVideoSDK.AmaniVideo.ButtonColors : Swift.Hashable {}
+extension AmaniVideoSDK.AmaniVideo.ButtonIcons : Swift.Equatable {}
+extension AmaniVideoSDK.AmaniVideo.ButtonIcons : Swift.Hashable {}
+extension AmaniVideoSDK.AmaniVideo.ConnectionState : Swift.Equatable {}
+extension AmaniVideoSDK.AmaniVideo.ConnectionState : Swift.Hashable {}
+extension AmaniVideoSDK.AmaniVideo.UIEvent : Swift.Equatable {}
+extension AmaniVideoSDK.AmaniVideo.UIEvent : Swift.Hashable {}
+extension AmaniVideoSDK.AmaniVideo.CameraPosition : Swift.Equatable {}
+extension AmaniVideoSDK.AmaniVideo.CameraPosition : Swift.Hashable {}
+extension AmaniVideoSDK.AmaniVideo.RemoteEvent : Swift.Equatable {}
+extension AmaniVideoSDK.AmaniVideo.RemoteEvent : Swift.Hashable {}

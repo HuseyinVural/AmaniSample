@@ -1,0 +1,38 @@
+PODS:
+  - AmaniSDK (2.3.6):
+    - OpenSSL-Universal (~> 1.1.1100)
+  - AmaniVideoSDK (1.1.1):
+    - Socket.IO-Client-Swift (~> 16.1.0)
+    - WebRTC-lib (~> 116.0.0)
+  - OpenSSL-Universal (1.1.2200)
+  - Socket.IO-Client-Swift (16.1.0):
+    - Starscream (~> 4.0.6)
+  - Starscream (4.0.6)
+  - WebRTC-lib (116.0.0)
+
+DEPENDENCIES:
+  - AmaniSDK (~> 2.3.6)
+  - AmaniVideoSDK (= 1.1.1)
+  - Starscream (= 4.0.6)
+
+SPEC REPOS:
+  https://github.com/AmaniTechnologiesLtd/Mobile_SDK_Repo:
+    - AmaniSDK
+    - AmaniVideoSDK
+  https://github.com/CocoaPods/Specs:
+    - OpenSSL-Universal
+    - Socket.IO-Client-Swift
+    - Starscream
+    - WebRTC-lib
+
+SPEC CHECKSUMS:
+  AmaniSDK: 3a4ce57a3154cd0e28a9de245a4cfd80ab11838d
+  AmaniVideoSDK: ba8b03729ab8f7ad1c7cf92af6d85c7bf5f1fa50
+  OpenSSL-Universal: 6e1ae0555546e604dbc632a2b9a24a9c46c41ef6
+  Socket.IO-Client-Swift: ee4b8f80a3db18dd7f32b266ddf273310609443c
+  Starscream: fb2c4510bebf908c62bd383bcf05e673720e91fd
+  WebRTC-lib: a7f14febc57a4bb334505ea33eb4f797ef9e3ac9
+
+PODFILE CHECKSUM: 77c7ef26e1b7364cac9540a57a62fa4654eb4c5a
+
+COCOAPODS: 1.12.1

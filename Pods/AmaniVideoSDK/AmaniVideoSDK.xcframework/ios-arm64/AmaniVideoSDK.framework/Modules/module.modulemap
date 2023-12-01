@@ -1,0 +1,4 @@
+framework module AmaniVideoSDK {
+  header "AmaniVideoSDK-Swift.h"
+  requires objc
+}

@@ -1,0 +1,7 @@
+${PODS_ROOT}/Target Support Files/Pods-AmaniSample/Pods-AmaniSample-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework
+${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/AmaniSDK/AmaniSDK.framework/AmaniSDK
+${PODS_XCFRAMEWORKS_BUILD_DIR}/AmaniVideoSDK/AmaniVideoSDK.framework/AmaniVideoSDK
+${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL-Universal/OpenSSL.framework/OpenSSL
+${PODS_XCFRAMEWORKS_BUILD_DIR}/WebRTC-lib/WebRTC.framework/WebRTC
