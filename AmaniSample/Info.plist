@@ -21,5 +21,9 @@
 			</array>
 		</dict>
 	</dict>
+    <key>NSCameraUsageDescription</key>
+    <string>Bu uygulama, fotoğraf çekmek için kameranızı kullanır.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Bu uygulama, ses kaydetmek için mikrofonunuzu kullanır.</string>
 </dict>
 </plist>
