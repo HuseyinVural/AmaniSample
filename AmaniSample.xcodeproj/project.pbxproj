@@ -363,6 +363,8 @@
 				DEVELOPMENT_TEAM = 5A3L6X7CGS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AmaniSample/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Bu uygulama, fotoğraf çekmek için kameranızı kullanır.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Bu uygulama, ses kaydetmek için mikrofonunuzu kullanır.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -392,6 +394,8 @@
 				DEVELOPMENT_TEAM = Q2G273UB5Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AmaniSample/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Bu uygulama, fotoğraf çekmek için kameranızı kullanır.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Bu uygulama, ses kaydetmek için mikrofonunuzu kullanır.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
